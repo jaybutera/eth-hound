@@ -59,7 +59,6 @@ async fn main() -> Result<(), Box<dyn Error>> {
         .filter_map(|tx| tx.from.value().cloned())
         .collect();
 
-    println!("From addresses:");
     for addr in from_addresses.iter() {
         if test_addrs.contains(addr) {
             println!("{:?}", addr);
